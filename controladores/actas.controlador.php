@@ -72,8 +72,6 @@ class ControladorActas{
                     'interCampania' => $_POST['interCampania'],
                 );
 
-                var_dump($data);
-
                 // OBTENGO DATOS DE VALORES DE LA CAMPAÑA
                 
                 $item = 'numero';
@@ -104,7 +102,7 @@ class ControladorActas{
                 $tabla = 'actas';
 
                 $respuesta = ModeloActas::mdlCargarActa($tabla,$data);
-                die();
+
                 $errores[] = $respuesta;
 
                 // DATA ANIMALES
