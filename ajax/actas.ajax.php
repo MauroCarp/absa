@@ -19,12 +19,21 @@ class AjaxActas{
 
         $inter = $this->inter;
 
-        $item = 'renspa';
-        $item2 = 'campania';
-        $item3 = 'intercampania';
-		$respuesta = ControladorActas::ctrValidarActa($item,$renspa,$item2,$campania,$item3,$inter);
+        if($inter){
 
-        echo json_encode($respuesta);
+            echo json_encode(['valida'=> 0]);
+            
+        } else {
+
+            $item = 'renspa';
+            $item2 = 'campania';
+            $item3 = 'intercampania';
+            $respuesta = ControladorActas::ctrValidarActa($item,$renspa,$item2,$campania,$item3,$inter);
+    
+            echo json_encode($respuesta);
+
+        }
+        
       
     }
 
